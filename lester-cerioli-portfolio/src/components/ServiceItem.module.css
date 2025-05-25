@@ -1,0 +1,39 @@
+.serviceItem {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  padding: 1.5rem; /* Increased padding */
+  margin-bottom: 1.5rem; /* Increased margin */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.serviceItem:hover {
+  transform: var(--hover-transform);
+  box-shadow: var(--hover-shadow);
+}
+
+.serviceItem h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem; /* Spacing under title */
+  color: var(--primary-color); /* Use primary color for title */
+  font-size: 1.35rem; /* Adjust size */
+}
+
+.serviceItem p {
+  color: var(--text-color); /* Ensure good contrast */
+  line-height: 1.7; /* Improve readability */
+  font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+  .serviceItem {
+    padding: 1rem; /* Reduce padding */
+  }
+  .serviceItem h3 {
+    font-size: 1.2rem; /* Smaller title */
+  }
+  .serviceItem p {
+    font-size: 0.9rem; /* Smaller text */
+  }
+}

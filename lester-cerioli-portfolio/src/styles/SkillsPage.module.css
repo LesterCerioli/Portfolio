@@ -1,0 +1,48 @@
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center cards within the container */
+  gap: 1rem; /* Use gap for spacing between cards */
+  padding: 1rem 0; /* Padding top/bottom, no side padding as cards have margins */
+  margin-bottom: 1.5rem; /* Space below each skills category container */
+}
+
+/* Styles for the category titles (e.g., Frontend, Backend) on the Skills page */
+/* These would be applied to the <h2> tags in skills.tsx if we wrap them or give them classes */
+/* For now, skills.tsx uses plain <h2> tags. Global h2 styles will apply. */
+/* If more specific styling is needed for these headers, we can add classes. */
+/* Example: */
+.categoryTitle {
+  font-size: 1.6rem; /* Example size */
+  color: var(--text-color);
+  margin-top: 2rem; /* Space above category title */
+  margin-bottom: 1rem; /* Space below category title */
+  text-align: center; /* Or left, depending on design */
+  border-bottom: 2px solid var(--primary-color); /* Accent line */
+  padding-bottom: 0.5rem;
+  display: inline-block; /* To make border only as wide as text */
+}
+
+.skillsIntro { /* For the intro paragraph on the skills page */
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive adjustments for SkillsPage */
+@media (max-width: 768px) {
+  .skillsContainer {
+    gap: 0.5rem; /* Reduce gap for smaller screens */
+  }
+  .categoryTitle {
+    font-size: 1.4rem;
+  }
+  .skillsIntro {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}

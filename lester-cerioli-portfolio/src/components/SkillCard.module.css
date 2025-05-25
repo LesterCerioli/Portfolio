@@ -1,0 +1,68 @@
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  padding: 1.5rem; /* Consistent padding */
+  margin: 0.75rem; /* Balanced margin */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex; /* For better internal alignment if needed */
+  flex-direction: column;
+  align-items: center; /* Center content */
+  min-width: 200px; /* Ensure cards have a decent minimum width */
+}
+
+.card:hover {
+  transform: var(--hover-transform);
+  box-shadow: var(--hover-shadow);
+}
+
+.iconPlaceholder {
+  width: 60px; /* Slightly larger icon placeholder */
+  height: 60px;
+  background-color: var(--light-gray); /* Lighter background */
+  border-radius: 50%;
+  margin: 0 auto 1rem; /* Increased margin below icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem; /* Larger icon text/symbol */
+  color: var(--primary-color); /* Use primary color for icon */
+  font-weight: bold;
+}
+
+.card h3 { /* Targeting h3 within .card */
+  font-size: 1.25rem; /* Adjust skill name size */
+  color: var(--text-color);
+  margin-top: 0;
+  margin-bottom: 0.5rem; /* Space between title and description */
+}
+
+.description {
+  font-size: 0.95rem; /* Slightly larger description */
+  color: var(--dark-gray);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  flex-grow: 1; /* Allow description to take available space */
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem; /* Reduce padding */
+    margin: 0.5rem;
+    min-width: 150px; /* Allow cards to be smaller */
+  }
+  .iconPlaceholder {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem; /* Smaller icon text */
+    margin-bottom: 0.75rem;
+  }
+  .card h3 {
+    font-size: 1.1rem; /* Smaller skill name */
+  }
+  .description {
+    font-size: 0.85rem; /* Smaller description */
+  }
+}

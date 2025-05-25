@@ -1,0 +1,183 @@
+/* Layout.module.css */
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--background-color); /* Use global variable */
+}
+
+.header {
+  background-color: var(--light-gray); /* Use global variable */
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--card-border); /* Use global variable */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolioTitleLink a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-color); /* Use global variable */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.portfolioTitleLink a:hover {
+  color: var(--primary-color); /* Use global variable */
+}
+
+.mainNav {
+  display: flex;
+  gap: 1.5rem; /* Adjust as needed */
+}
+
+.navLink, .activeLink {
+  text-decoration: none;
+  color: var(--text-color); /* Use global variable */
+  font-size: 1rem;
+  padding: 0.5rem 0.25rem; /* Fine-tune padding */
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+.navLink:hover {
+  color: var(--primary-color); /* Use global variable */
+}
+
+.activeLink {
+  font-weight: bold;
+  color: var(--primary-color); /* Use global variable */
+}
+
+.activeLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Adjust to align with text */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color); /* Use global variable */
+}
+
+.langSwitcher {
+  display: flex;
+  align-items: center; /* Align buttons vertically */
+  gap: 0.5rem;
+}
+
+.langButton, .activeLangButton {
+  padding: 0.6rem 0.9rem; /* Slightly adjusted padding */
+  border: 1px solid var(--medium-gray); /* Use global variable */
+  background-color: var(--background-color); /* Use global variable */
+  cursor: pointer;
+  border-radius: 5px; /* Consistent with global button */
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.langButton:hover {
+  background-color: var(--light-gray); /* Use global variable */
+  border-color: var(--dark-gray); /* Use global variable */
+}
+
+.activeLangButton {
+  border-color: var(--primary-color); /* Use global variable */
+  background-color: var(--primary-color); /* Use global variable for active background */
+  color: white; /* Text color for active button */
+  cursor: default;
+}
+
+.activeLangButton:disabled {
+  opacity: 1; /* Keep it looking strong */
+}
+
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem; /* Ensure adequate padding */
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem auto; /* Add some margin from header/footer */
+}
+
+.footer {
+  background-color: var(--text-color); /* Use global variable for dark background */
+  color: var(--light-gray); /* Light text on dark background */
+  text-align: center;
+  padding: 2rem 1rem; /* Increased padding */
+  font-size: 0.9rem;
+  border-top: 1px solid var(--dark-gray); /* Use global variable */
+}
+
+.footer p {
+  margin: 0.5rem 0; /* Adjust spacing for footer paragraphs */
+}
+
+.footer a { /* Style links in footer if any */
+  color: var(--primary-color);
+}
+
+.footer a:hover {
+  color: var(--secondary-color);
+}
+
+/* Responsive adjustments for Layout */
+@media (max-width: 768px) {
+  .header {
+    padding: 0.8rem 1rem;
+  }
+  .headerContent {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .mainNav {
+    gap: 1rem;
+    flex-wrap: wrap; /* Allow nav links to wrap */
+    justify-content: center; /* Center wrapped links */
+  }
+  .navLink, .activeLink {
+    font-size: 0.95rem; /* Slightly smaller for mobile nav */
+  }
+  .portfolioTitleLink a {
+    font-size: 1.6rem;
+  }
+  .mainContent {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+  .langSwitcher {
+    margin-top: 0.5rem; /* Add some space if headerContent wraps */
+  }
+}
+
+@media (max-width: 480px) {
+  .mainNav {
+    gap: 0.5rem; /* Further reduce gap for very small screens */
+    font-size: 0.9rem;
+  }
+  .navLink, .activeLink {
+    padding: 0.4rem 0.2rem; /* Adjust padding for smaller links */
+  }
+  .portfolioTitleLink a {
+    font-size: 1.4rem;
+  }
+  .langButton, .activeLangButton {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+  }
+  .mainContent {
+    padding: 1rem 0.5rem;
+    margin: 1rem auto;
+  }
+}

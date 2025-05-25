@@ -1,0 +1,88 @@
+/* ContactPage.module.css */
+.contactPage {
+  padding: 1rem 0; /* Padding for the overall page */
+}
+
+.pageTitle { /* For the main "Contact" title, if rendered on the page itself */
+  font-size: 1.75rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contactInfo { /* For the introductory paragraph */
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactSection {
+  background-color: var(--card-background);
+  padding: 1.5rem 2rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.07);
+}
+
+.contactSection h2 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--light-gray); /* Subtle separator */
+  padding-bottom: 0.5rem;
+}
+
+.contactSection p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem; /* Adjust spacing for paragraphs within sections */
+}
+
+.contactSection a {
+  color: var(--secondary-color); /* Different color for links within sections if desired */
+  font-weight: 500;
+}
+
+.contactSection a:hover {
+  text-decoration: underline;
+}
+
+.contactButton { /* For the LinkedIn button specifically, if more distinction is needed */
+  display: inline-block; /* To allow margin and padding correctly */
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.5rem; /* Custom padding for this button */
+  font-size: 1rem;
+  /* It will inherit global button styles, this is for overrides or specific additions */
+}
+
+/* Responsive adjustments for ContactPage */
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 1.6rem;
+  }
+  .contactInfo {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .contactSection {
+    padding: 1.25rem 1.5rem;
+  }
+  .contactSection h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactSection {
+    padding: 1rem;
+  }
+  .contactSection h2 {
+    font-size: 1.2rem;
+  }
+}
